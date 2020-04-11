@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  width: 80vw;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.inputKeywordsHandle {
+  position: relative;
+  display: flex;
+}
+
+.inputKeywordsHandle input[type="text"] {
+  height: 30px;
+  display: inline-block;
+  width: 300px;
+}
+
+.inputKeywordsHandle ul {
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  list-style: none;
+}
+
+.inputKeywordsHandle ul li {
+  background: #e60228cb;
+  opacity: 0.9;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding-left: 30px;
+  border-bottom: solid 1px white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.inputKeywordsHandle ul li:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.inputKeywordsHandle ul li:first-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.fake-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fake-form input[type="text"] {
+  border-radius: 30px;
+  border: solid 1px lightgrey;
+  height: 30px;
+  padding-left: 20px;
+}
+
+.fake-form input[type="submit"] {
+  border-radius: 30px;
+  border: solid 1px lightgrey;
+  height: 30px;
+  margin-left: 30px;
+  width: 200px;
+  background: #f50029cb;
+  color: white;
+  cursor: pointer;
+}
+
+article {
+  margin: 20px 0;
+  border: solid 1px lightgray;
+  padding: 20px;
+  width: 24%;
+  border-radius: 10px;
+}
+
+article h2 {
+  color: #f50029cb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+.articlesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.keywordsList {
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
