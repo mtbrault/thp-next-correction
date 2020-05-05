@@ -1,0 +1,21 @@
+.day {
+	width: 15%;
+    margin: auto;
+    margin-bottom: 2%;
+    padding: 10px 0px;
+    border: 5px solid black;
+    text-align: center;
+    transition: 1.2s;
+}
+
+.day:hover {
+    border: 5px solid #b59760;
+    transition: 1.2s;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: 'space-around';
+    flex-wrap: wrap;
+}
