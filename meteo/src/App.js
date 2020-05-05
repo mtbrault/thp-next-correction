@@ -11,7 +11,6 @@ class App extends Component {
 
     this.state = {
       isLoading: true,
-      isError: false,
       errorMessage: '',
       key: '4ca67572e10349009eeed7f075392fbc',
       city: {},
@@ -36,7 +35,6 @@ class App extends Component {
           .catch(error => {
             this.setState({
               errorMessage: error.message,
-              error: true,
             });
           })
           .finally(() => {
@@ -46,7 +44,6 @@ class App extends Component {
       error => {
         this.setState({
           errorMessage: `ERROR${error.code}: ${error.message}`,
-          error: true,
           isLoading: false,
         });
       }
@@ -55,11 +52,11 @@ class App extends Component {
 
   render() {
     let renderedView;
-    const { isLoading, errorMessage, error, city, list } = this.state;
+    const { isLoading, errorMessage, city, list } = this.state;
     if (isLoading) {
       renderedView = <p>Veuillez patienter, nous sommes entrain de vous localiser...</p>
     }
-    else if (error) {
+    else if (errorMessage !== '') {
       renderedView = <p>{errorMessage}</p>
     }
     else {
