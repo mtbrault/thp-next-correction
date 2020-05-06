@@ -28,9 +28,16 @@ const App = () => {
     setDataList(data);
   }
 
+  const renderedItem = (
+    <div>
+      <Header cityName={cityName} countryCode={countryCode} />
+      <Meteo meteoList={dataList} />
+    </div>
+  )
+
   return (
     <>
-      {isLoading ? <p>Pas chargé</p> : <p>Chargé</p>}
+      {isLoading ? <p>Veuillez patienter, nous sommes entrain de vous localiser...</p> : renderedItem}
 
     </>
   )
